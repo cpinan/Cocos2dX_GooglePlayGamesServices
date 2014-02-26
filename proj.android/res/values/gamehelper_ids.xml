@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="google_play_game_app_id">633315350467</string>
+
+    <!-- Achievements -->
+    <string name="achievement_name1_id">ReplaceMe</string>
+    <string name="achievement_name2_id">ReplaceMe</string>
+
+    <!-- Leaderboards -->
+    <string name="leaderboard_name1_id">ReplaceMe</string>
+    <string name="leaderboard_name2_id">ReplaceMe</string>
+
+</resources>
