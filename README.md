@@ -1,4 +1,9 @@
 Cocos2dX_GooglePlayGamesServices
+
+V.1.0.0
+
+- Android Google Play Game Services with Cocos2d-x Support for Achievements and Leaderboards.
+
 ================================
 
 Android Support with cocos2d-x for Google Play Games Services.
