@@ -1,10 +1,12 @@
-Cocos2dX_GooglePlayGamesServices
+<h1>Cocos2dX GooglePlayGamesServices</h1>
 
 V.1.0.0
 
 - Android Google Play Game Services with Cocos2d-x Support for Achievements and Leaderboards.
 
 ================================
+
+Don't forget add google-play-services_lib library. The version used for this template is: 4242000
 
 Android Support with cocos2d-x for Google Play Games Services.
 
