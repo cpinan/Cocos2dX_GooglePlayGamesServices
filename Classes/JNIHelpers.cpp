@@ -80,13 +80,14 @@ void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath
 void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath, const char* arg0, long score) {
     cocos2d::JniMethodInfo minfo;
 
-    bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(Ljava/lang/String;Z)V");
+    bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(Ljava/lang/String;J)V");
 
     if (isHave) 
 	{
 		jstring stringArg0 = minfo.env->NewStringUTF(arg0);
+        jlong scoreArg1    = score;
 
-        minfo.env->CallStaticIntMethod(minfo.classID, minfo.methodID, stringArg0, score);
+        minfo.env->CallStaticIntMethod(minfo.classID, minfo.methodID, stringArg0, scoreArg1);
 
 		minfo.env->DeleteLocalRef(stringArg0);
 
