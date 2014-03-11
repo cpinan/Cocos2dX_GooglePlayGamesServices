@@ -3,13 +3,14 @@ package com.carlospinan.utils;
 import tv.ouya.console.api.OuyaController;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.os.Bundle;
 
-import com.carlospinan.cocos2dx_test.R;
+import com.carlospinan.cocos2dx3.R;
 import com.google.android.gms.games.Games;
 
 /**
  * 
- * @author Carlos Eduardo Piñan Indacochea
+ * @author Carlos Eduardo Piï¿½n Indacochea
  * @version 1.0.0
  * @date 2014/02/25
  * @update 2014/02/25
@@ -39,7 +40,7 @@ public class NativeUtils {
 	}
 
 	/**
-	 * Configura los datos iniciales para comunicar los eventos de aquí a
+	 * Configura los datos iniciales para comunicar los eventos de aquï¿½a
 	 * cocos2d-x.
 	 */
 	public static void configure(Context context) {

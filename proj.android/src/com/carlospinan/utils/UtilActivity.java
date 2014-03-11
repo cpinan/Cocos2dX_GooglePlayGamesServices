@@ -2,7 +2,6 @@ package com.carlospinan.utils;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.WindowManager;
 
 import com.google.android.gms.appstate.AppStateManager;
@@ -11,7 +10,7 @@ import com.google.example.games.basegameutils.BaseGameActivity;
 
 /**
  * 
- * @author Carlos Eduardo Piñan Indacochea
+ * @author Carlos Eduardo Piï¿½n Indacochea
  * @version 1.0.0
  * @date 2014/02/25
  * @update 2014/02/25
@@ -58,28 +57,28 @@ public class UtilActivity extends BaseGameActivity {
 
 	}
 
-	@Override
-	public boolean onGenericMotionEvent(MotionEvent event) {
-		if (!ConfigUtils.IS_OUYA_APP)
-			return super.onGenericMotionEvent(event);
-		/*
-		 * // Get the player # int player =
-		 * OuyaController.getPlayerNumByDeviceId(event.getDeviceId());
-		 * 
-		 * // Get all the axis for the event float LS_X =
-		 * event.getAxisValue(OuyaController.AXIS_LS_X); float LS_Y =
-		 * event.getAxisValue(OuyaController.AXIS_LS_Y); float RS_X =
-		 * event.getAxisValue(OuyaController.AXIS_RS_X); float RS_Y =
-		 * event.getAxisValue(OuyaController.AXIS_RS_Y); float L2 =
-		 * event.getAxisValue(OuyaController.AXIS_L2); float R2 =
-		 * event.getAxisValue(OuyaController.AXIS_R2);
-		 * 
-		 * // Do something with the input // updatePlayerInput(player, LS_X,
-		 * LS_Y, RS_X, RS_Y, L2, R2);
-		 */
-
-		return true;
-	}
+//	@Override
+//	public boolean onGenericMotionEvent(MotionEvent event) {
+//		if (!ConfigUtils.IS_OUYA_APP)
+//			return super.onGenericMotionEvent(event);
+//		/*
+//		 * // Get the player # int player =
+//		 * OuyaController.getPlayerNumByDeviceId(event.getDeviceId());
+//		 * 
+//		 * // Get all the axis for the event float LS_X =
+//		 * event.getAxisValue(OuyaController.AXIS_LS_X); float LS_Y =
+//		 * event.getAxisValue(OuyaController.AXIS_LS_Y); float RS_X =
+//		 * event.getAxisValue(OuyaController.AXIS_RS_X); float RS_Y =
+//		 * event.getAxisValue(OuyaController.AXIS_RS_Y); float L2 =
+//		 * event.getAxisValue(OuyaController.AXIS_L2); float R2 =
+//		 * event.getAxisValue(OuyaController.AXIS_R2);
+//		 * 
+//		 * // Do something with the input // updatePlayerInput(player, LS_X,
+//		 * LS_Y, RS_X, RS_Y, L2, R2);
+//		 */
+//
+//		return true;
+//	}
 
 	@Override
 	public void onSignInFailed() {
@@ -152,8 +151,8 @@ public class UtilActivity extends BaseGameActivity {
 	/*
 	 * Cocos2d-x Library
 	 */
-	static {
-		System.loadLibrary("game");
-	}
+//	static {
+//		System.loadLibrary("game");
+//	}
 
 }
