@@ -42,7 +42,7 @@ local.properties
 *.sln.docstates
 
 # Build results
-
+[Dd]ebug.win32/
 [Dd]ebug/
 [Rr]elease/
 x64/

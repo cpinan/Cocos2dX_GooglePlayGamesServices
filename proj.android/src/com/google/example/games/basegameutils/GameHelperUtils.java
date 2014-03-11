@@ -10,9 +10,10 @@ import android.content.pm.Signature;
 import android.content.res.Resources;
 import android.util.Log;
 
-import com.carlospinan.cocos2dx_test.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.games.GamesActivityResultCodes;
+
+import com.carlospinan.cocos2dx3.R;
 
 /**
  * Created by btco on 2/10/14.
