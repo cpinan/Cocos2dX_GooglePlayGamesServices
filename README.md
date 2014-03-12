@@ -1,8 +1,24 @@
 <h1>Cocos2dX GooglePlayGamesServices</h1>
 
+================================
+
 V.1.0.0
 
 - Android Google Play Game Services with Cocos2d-x Support for Achievements and Leaderboards.
+
+================================
+
+v.1.0.1
+
+Bugs fixed by vivekporwal - https://github.com/vivekporwal:
+
+1. Submit score to play services was not working properly before because of call to bad function signature in JNIHelper.cpp which is corrected now.
+2. 'long score' was taking garbage value as not converted to jlong is also fixed.
+3. incrementAchievement : function call done for Boolean instead of Integer is corrected now.
+
+Version for Cocos2d-x v3.0 by howlryu - https://github.com/howlryu:
+
+	https://github.com/howlryu/Cocos2dX_GooglePlayGamesServices
 
 ================================
 
