@@ -98,7 +98,7 @@ void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath
 void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath, const char* arg0, int numSteps) {
     cocos2d::JniMethodInfo minfo;
 
-    bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(Ljava/lang/String;Z)V");
+    bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(Ljava/lang/String;I)V");
 
     if (isHave) 
 	{
