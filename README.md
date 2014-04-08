@@ -1,4 +1,4 @@
-<h1>Cocos2dX GooglePlayGamesServices</h1>
+<h1>Cocos2dx Google Play Game Services</h1>
 
 Mit License - http://opensource.org/
 
