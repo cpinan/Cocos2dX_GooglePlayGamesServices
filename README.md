@@ -26,12 +26,12 @@ Version for Cocos2d-x v3.0 by howlryu - https://github.com/howlryu
 
 V.1.0.2
 
-IOS Leaderboards, Achievements and Little demo implemented.
-Merge android project and IOS project to manage some platforms with the same code.
-On Android Side modify the "gamehelper_ids" xml to update the app id and on the IOS side update the "PlayGameConstants.h" to make changes.
-Leaderboards ID's and Achievements ID's are in the "PlayGameConstants.h" file
-Created "PlayGameSingleton.h" for IOS side.
-Check IOS folder to watch the files.
+1. IOS Leaderboards, Achievements and Little demo implemented.
+2. Merge android project and IOS project to manage some platforms with the same code.
+3. On Android Side modify the "gamehelper_ids" xml to update the app id and on the IOS side update the "PlayGameConstants.h" to make changes.
+4. Leaderboards ID's and Achievements ID's are in the "PlayGameConstants.h" file
+5. Created "PlayGameSingleton.h" for IOS side.
+6. Check IOS folder to watch the files.
 
 ================================
 
