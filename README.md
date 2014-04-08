@@ -89,6 +89,26 @@ for Google Play Game Services.
 ========================================================================================
 IOS Side explanation V 1.0.2:
 
+You must include "NativeUtils.h" and work with that methods.
+
+If you want to change the notification achievement bar position you should modify the "AppController.mm" and change the line:
+
+	[GPGManager sharedInstance].achievementUnlockedToastPlacement = kGPGToastPlacementTop;
+	
+The
+    
+    if(!PlayGameSingleton::sharedInstance().isSignedIn())
+    {
+        PlayGameSingleton::sharedInstance().trySilentAuthentication();
+        [NSThread detachNewThreadSelector:@selector(playServicesAuthenticate) toTarget:self withObject:nil];
+    }
+    
+Try to authenticate if the user is not signed in and run in background.
+
+Play with the methods and modify the code if you need.
+
+
+
 ========================================================================================
 
 If you have some problem just contact me to:
