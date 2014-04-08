@@ -1,9 +1,15 @@
-Cocos2dx Google Play Game Services
+<h1>Cocos2dx Google Play Game Services</h1>
+
 Mit License - http://opensource.org/
+
+================================================
 
 V.1.0.0
 
 Android Google Play Game Services with Cocos2d-x Support for Achievements and Leaderboards.
+
+================================================
+
 v.1.0.1
 
 Bugs fixed by vivekporwal - https://github.com/vivekporwal
@@ -14,6 +20,9 @@ incrementAchievement : function call done for Boolean instead of Integer is corr
 Version for Cocos2d-x v3.0 by howlryu - https://github.com/howlryu
 
 https://github.com/howlryu/Cocos2dX_GooglePlayGamesServices
+
+================================================
+
 V.1.0.2
 
 IOS Leaderboards, Achievements and Little demo implemented.
@@ -23,6 +32,8 @@ Leaderboards ID's and Achievements ID's are in the "PlayGameConstants.h" file
 Created "PlayGameSingleton.h" for IOS side.
 Check IOS folder to watch the files.
 Don't forget add google-play-services_lib library. The version used for this template is: 4242000
+
+================================================
 
 Android Support with cocos2d-x for Google Play Games Services.
 
