@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E2785A54-B02D-4539-9BC8-5FD00085A964</string>
+	<string>31CEC256-C5BA-477C-B157-3725D3B1744A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>GooglePlayGameServices</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5DEF757B-A4C4-49CF-83E2-449165094FF6</key>
-		<string>https://github.com/cpinan/VitrumProjects.git</string>
+		<key>0E0CA125-4077-4470-B546-514A5CE08BFA</key>
+		<string>https://github.com/cpinan/Cocos2dX_GooglePlayGamesServices.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GooglePlayGameServices/GooglePlayGameServices.xcodeproj/project.xcworkspace</string>
+	<string>GooglePlayGameServices.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5DEF757B-A4C4-49CF-83E2-449165094FF6</key>
-		<string>../../..</string>
+		<key>0E0CA125-4077-4470-B546-514A5CE08BFA</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/cpinan/VitrumProjects.git</string>
+	<string>https://github.com/cpinan/Cocos2dX_GooglePlayGamesServices.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5DEF757B-A4C4-49CF-83E2-449165094FF6</string>
+	<string>0E0CA125-4077-4470-B546-514A5CE08BFA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5DEF757B-A4C4-49CF-83E2-449165094FF6</string>
+			<string>0E0CA125-4077-4470-B546-514A5CE08BFA</string>
 			<key>IDESourceControlWCCName</key>
-			<string>VitrumProjects</string>
+			<string>Cocos2dX_GooglePlayGamesServices</string>
 		</dict>
 	</array>
 </dict>
