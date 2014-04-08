@@ -1,5 +1,7 @@
 <h1>Cocos2dX GooglePlayGamesServices</h1>
 
+Mit License - http://opensource.org/
+
 ================================
 
 V.1.0.0
@@ -19,6 +21,17 @@ Bugs fixed by vivekporwal - https://github.com/vivekporwal
 Version for Cocos2d-x v3.0 by howlryu - https://github.com/howlryu
 
 	https://github.com/howlryu/Cocos2dX_GooglePlayGamesServices
+
+================================
+
+V.1.0.2
+
+IOS Leaderboards, Achievements and Little demo implemented.
+Merge android project and IOS project to manage some platforms with the same code.
+On Android Side modify the "gamehelper_ids" xml to update the app id and on the IOS side update the "PlayGameConstants.h" to make changes.
+Leaderboards ID's and Achievements ID's are in the "PlayGameConstants.h" file
+Created "PlayGameSingleton.h" for IOS side.
+Check IOS folder to watch the files.
 
 ================================
 
@@ -72,6 +85,11 @@ In this version the current methods are:
 	
 In the next version I will add the multiplayer support and I'm working on the Ouya integration and IOS support 
 for Google Play Game Services.
+
+========================================================================================
+IOS Side explanation V 1.0.2:
+
+========================================================================================
 
 If you have some problem just contact me to:
 
