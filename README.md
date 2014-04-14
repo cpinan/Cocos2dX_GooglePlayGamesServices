@@ -35,6 +35,16 @@ V.1.0.2
 
 ================================
 
+v.1.0.3
+
+1. Android Screen Blinking (Flickering) fixed thanks to - https://github.com/cocos2d/cocos2d-x/pull/5320
+2. IOS files updated to support version lower to IOS7 because "animated" on "Google Play Game Services" IOS has issues on ipod version (just tested on iPad mini and iPod Touch)
+3. Android and IOS AdMob integration.
+4. JNIHelper added to Xcode project and with pragma validation just for Android to use the same code on both versions.
+5. Some bugs fixed.
+
+================================
+
 Don't forget add google-play-services_lib library. The version used for this template is: 4242000
 
 Android Support with cocos2d-x for Google Play Games Services.
