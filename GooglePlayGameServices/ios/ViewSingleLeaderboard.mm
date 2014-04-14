@@ -43,13 +43,17 @@
 {
     // You get this leaderboard Id from the Developer Console
     
+    BOOL animated = YES;
+    if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
+        animated = NO;
+    
     GPGLeaderboardController *leadController = [[GPGLeaderboardController alloc] initWithLeaderboardId:leaderBoardID];
     
     // Newly-added lines to set the timescope
     // leadController.timeScope = GPGLeaderboardTimeScopeThisWeek;
     
     leadController.leaderboardDelegate = self;
-    [self presentViewController:leadController animated:YES completion:nil];
+    [self presentViewController:leadController animated:animated completion:nil];
     
 }
 
@@ -69,7 +73,12 @@
 - (void)leaderboardViewControllerDidFinish: (GPGLeaderboardController *)viewController
 {
     NSLog(@"LeaderBoard View Controller Did Finish");
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    BOOL animated = YES;
+    if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
+        animated = NO;
+    
+    [self dismissViewControllerAnimated:animated completion:nil];
     PlayGameSingleton::sharedInstance().finishSingleLeaderboard();
 }
 

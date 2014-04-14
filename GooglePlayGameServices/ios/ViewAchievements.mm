@@ -49,15 +49,25 @@
 
 #pragma mark - Achievements Google Play Game Services
 - (void)achievementViewControllerDidFinish: (GPGAchievementController *)viewController {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    BOOL animated = YES;
+    if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
+        animated = NO;
+    
+    [self dismissViewControllerAnimated:animated completion:nil];
     PlayGameSingleton::sharedInstance().finishAchievements();
 }
 
 -(void) showAchievements
 {
+    
+    BOOL animated = YES;
+    if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
+        animated = NO;
+    
     GPGAchievementController *achController = [[GPGAchievementController alloc] init];
     achController.achievementDelegate = self;
-    [self presentViewController:achController animated:YES completion:nil];
+    [self presentViewController:achController animated:animated completion:nil];
 }
 
 @end

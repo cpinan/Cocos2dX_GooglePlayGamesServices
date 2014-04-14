@@ -51,14 +51,25 @@
 #pragma mark - Leader Board View Controller
 
 - (void)leaderboardsViewControllerDidFinish: (GPGLeaderboardsController *)viewController {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    BOOL animated = YES;
+    if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
+        animated = NO;
+    
+    [self dismissViewControllerAnimated:animated completion:nil];
+    PlayGameSingleton::sharedInstance().finishLeaderboards();
 }
 
 -(void) showLeaderboards
 {
     GPGLeaderboardsController *leadsController = [[GPGLeaderboardsController alloc] init];
     leadsController.leaderboardsDelegate = self;
-    [self presentViewController:leadsController animated:YES completion:nil];
+    
+    BOOL animated = YES;
+    if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
+        animated = NO;
+    
+    [self presentViewController:leadsController animated:animated completion:nil];
 }
 
 @end
