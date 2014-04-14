@@ -307,6 +307,32 @@ public class NativeUtils {
 		});
 	}
 
+	// AdMob
+
+	/*
+	 * Show and Hide AdView
+	 */
+
+	public static void showAd() {
+		app.runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				app.showAd();
+			}
+		});
+	}
+
+	public static void hideAd() {
+		app.runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				app.hideAd();
+			}
+		});
+	}
+
 	/*
 	 * Ouya support Note: For Ouya support need uncomment the <category
 	 * android:name="tv.ouya.intent.category.GAME" /> in the AndroidManifest.xml

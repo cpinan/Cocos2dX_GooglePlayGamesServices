@@ -221,7 +221,8 @@ containing a value of this type.
         public static final int google_play_services_version=0x7f060000;
     }
     public static final class string {
-        public static final int app_name=0x7f050027;
+        public static final int AD_UNIT_ID=0x7f05001b;
+        public static final int app_name=0x7f050029;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
          */
@@ -316,19 +317,22 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f050013;
-        public static final int fail_increment_achievement=0x7f050023;
-        public static final int fail_show_achievements=0x7f050024;
-        public static final int fail_show_leaderboard=0x7f050026;
-        public static final int fail_show_leaderboards=0x7f050025;
-        public static final int fail_submit_score_leaderboard=0x7f050021;
-        public static final int fail_unlock_achievement=0x7f050022;
-        public static final int gamehelper_alert=0x7f05001c;
-        public static final int gamehelper_app_misconfigured=0x7f05001e;
-        public static final int gamehelper_license_failed=0x7f05001f;
-        public static final int gamehelper_sign_in_failed=0x7f05001d;
-        public static final int gamehelper_unknown_error=0x7f050020;
-        public static final int google_play_game_app_id=0x7f05001b;
-        public static final int rsa_base64_public_key=0x7f05001a;
+        public static final int fail_increment_achievement=0x7f050025;
+        public static final int fail_show_achievements=0x7f050026;
+        public static final int fail_show_leaderboard=0x7f050028;
+        public static final int fail_show_leaderboards=0x7f050027;
+        public static final int fail_submit_score_leaderboard=0x7f050023;
+        public static final int fail_unlock_achievement=0x7f050024;
+        public static final int gamehelper_alert=0x7f05001e;
+        public static final int gamehelper_app_misconfigured=0x7f050020;
+        public static final int gamehelper_license_failed=0x7f050021;
+        public static final int gamehelper_sign_in_failed=0x7f05001f;
+        public static final int gamehelper_unknown_error=0x7f050022;
+        public static final int google_play_game_app_id=0x7f05001d;
+        /**  Location client code resources (prefix with location_client) 
+         */
+        public static final int location_client_powered_by_google=0x7f05001a;
+        public static final int rsa_base64_public_key=0x7f05001c;
     }
     public static final class styleable {
         /** Attributes that can be used with a AdsAttrs.

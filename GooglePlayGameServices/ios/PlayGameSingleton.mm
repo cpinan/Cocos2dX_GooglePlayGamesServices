@@ -13,6 +13,7 @@
 #include "ViewSingleLeaderboard.h"
 #include "ViewLeaderboardPicker.h"
 #include "ViewAchievements.h"
+#include "AdMobBannerView.h"
 
 #include "cocos2d.h"
 
@@ -22,6 +23,7 @@ using namespace cocos2d;
 ViewSingleLeaderboard* viewSingleLeaderboard = 0;
 ViewLeaderboardPicker* viewLeaderboardPicker = 0;
 ViewAchievements* viewAchiemevents = 0;
+AdMobBannerView* adMobBannerView = 0;
 
 #pragma mark - Destructor and Constructor
 PlayGameSingleton::~PlayGameSingleton()
@@ -301,4 +303,32 @@ void PlayGameSingleton::signOut()
 }
 
 
+#pragma mark - Advertisement
+void PlayGameSingleton::initAd()
+{
+    if(!adMobBannerView)
+        adMobBannerView = [[AdMobBannerView alloc] init];
+    
+    
+    UIWindow *window =  [[UIApplication sharedApplication] keyWindow];
+    
+    if(!rootController)
+        rootController = window.rootViewController;
+    
+    [((UIViewController *) rootController).view addSubview: adMobBannerView.view];
+}
+
+
+void PlayGameSingleton::showAd()
+{
+    [adMobBannerView show];
+}
+
+void PlayGameSingleton::hideAd()
+{
+    [adMobBannerView hide];
+    //[adMobBannerView.view removeFromSuperview];
+    //[adMobBannerView release];
+    //adMobBannerView = 0;
+}
 

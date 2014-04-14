@@ -1,12 +1,16 @@
 //
 //  JniHelpers.cpp
 #include "JniHelpers.h"
+#include "cocos2d.h"
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include <jni.h>
 #include "platform/android/jni/JniHelper.h"
 #include <android/log.h>
+#endif
 
 
 unsigned int JniHelpers::jniCommonIntCall(const char* methodName, const char* classPath, const char* arg0) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
 
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(Ljava/lang/String;)I");
@@ -21,11 +25,13 @@ unsigned int JniHelpers::jniCommonIntCall(const char* methodName, const char* cl
 
 		return (unsigned int)ret;
     }
+#endif
 
 	return 0;
 }
 
 unsigned int JniHelpers::jniCommonIntCall(const char* methodName, const char* classPath, const char* arg0, bool looping) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
 
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(Ljava/lang/String;Z)I");
@@ -40,11 +46,13 @@ unsigned int JniHelpers::jniCommonIntCall(const char* methodName, const char* cl
 
 		return (unsigned int)ret;
     }
+#endif
 
 	return 0;
 }
 
 void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath, const char* arg0) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
 
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo, classPath, methodName, "(Ljava/lang/String;)V");
@@ -57,10 +65,11 @@ void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath
 
 		minfo.env->DeleteLocalRef(stringArg0);
     }
-
+#endif
 }
 
 void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath, const char* arg0, bool looping) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
 
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(Ljava/lang/String;Z)V");
@@ -74,10 +83,11 @@ void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath
 		minfo.env->DeleteLocalRef(stringArg0);
 
     }
-
+#endif
 }
 
 void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath, const char* arg0, long score) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
 
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(Ljava/lang/String;J)V");
@@ -92,10 +102,11 @@ void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath
 		minfo.env->DeleteLocalRef(stringArg0);
 
     }
-
+#endif
 }
 
 void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath, const char* arg0, int numSteps) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
 
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(Ljava/lang/String;I)V");
@@ -109,10 +120,11 @@ void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath
 		minfo.env->DeleteLocalRef(stringArg0);
 
     }
-
+#endif
 }
 
 void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
     
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "()V");
@@ -121,9 +133,11 @@ void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath
 	{
         minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID);
     }
+#endif
 }
 
 void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath, unsigned int arg0) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
 
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(I)V");
@@ -132,9 +146,11 @@ void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath
 	{
         minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID, arg0);
     }
+#endif
 }
 
 float JniHelpers::jniCommonFloatCall(const char* methodName, const char* classPath) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
 	
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "()F");
@@ -144,11 +160,12 @@ float JniHelpers::jniCommonFloatCall(const char* methodName, const char* classPa
         jfloat ret = minfo.env->CallStaticIntMethod(minfo.classID, minfo.methodID);
 		return (float)ret;
     }
-	
+#endif
 	return 0.0;
 }
 
 void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath, float arg0){
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
 	
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo, classPath, methodName, "(F)V");
@@ -157,9 +174,12 @@ void JniHelpers::jniCommonVoidCall(const char* methodName, const char* classPath
 	{
         minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID, arg0);
     }
+#endif
+
 }
 
 bool JniHelpers::jniCommonBoolCall(const char* methodName, const char* classPath) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
 
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "()Z");
@@ -169,10 +189,12 @@ bool JniHelpers::jniCommonBoolCall(const char* methodName, const char* classPath
     	jboolean ret = minfo.env->CallStaticBooleanMethod(minfo.classID, minfo.methodID);
 		return (bool)ret;
     }
+#endif
     return false;
 }
 
 bool JniHelpers::jniCommonBoolCall(const char* methodName, const char* classPath, unsigned int arg0) {
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     cocos2d::JniMethodInfo minfo;
     
     bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo,classPath,methodName, "(I)Z");
@@ -182,5 +204,6 @@ bool JniHelpers::jniCommonBoolCall(const char* methodName, const char* classPath
     	jboolean ret = minfo.env->CallStaticBooleanMethod(minfo.classID, minfo.methodID, arg0);
 		return (bool)ret;
     }
+#endif
     return false;
 }
