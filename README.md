@@ -128,7 +128,9 @@ Play with the methods and modify the code if you need.
 ========================================================================================
 AdMob interstitial integration V 1.0.4:
 
-Just call to preloadIntestitialAd() before showing the ad. Then call to showIntestitialAd() to show an ad. Notice these methods require to be runned on main UI Thread. To avoid reconnect to Google Game Play Services on each intestitial shown I commented BaseGameActivity.onStop() method. 
+Just call to preloadIntestitialAd() before showing the ad. Then call to showIntestitialAd() to show an ad. Notice these methods require to be runned on main UI Thread. 
+
+To avoid reconnect to Google Game Play Services on each intestitial shown I commented BaseGameActivity.onStop() method. 
 ========================================================================================
 
 If you have some problem just contact me to:
