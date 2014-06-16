@@ -2,5 +2,7 @@
 <resources>
     
     <string name="AD_UNIT_ID">ca-app-pub-3855348217239115/4113027387</string>
+    <string name="AD_UNIT_INTERSTITIAL_ID">ca-app-pub-3855348217239115/4113027387</string>
+
     
 </resources>
