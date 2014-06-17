@@ -126,8 +126,8 @@ public abstract class BaseGameActivity extends Cocos2dxActivity implements
 	@Override
 	protected void onStop() {
 		super.onStop();
-		if (ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			mHelper.onStop();
+		//if (ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
+		//	mHelper.onStop();
 	}
 
 	@Override

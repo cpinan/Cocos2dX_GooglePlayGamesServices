@@ -45,6 +45,12 @@ v.1.0.3
 
 ================================
 
+v.1.0.4
+
+1. Added AdMob interstitial support. Now you can preload interstitial ads and show whenever you want. 
+
+================================
+
 Don't forget add google-play-services_lib library. The version used for this template is: 4242000
 
 Android Support with cocos2d-x for Google Play Games Services.
@@ -119,6 +125,12 @@ Play with the methods and modify the code if you need.
 
 
 
+========================================================================================
+AdMob interstitial integration V 1.0.4:
+
+Just call to preloadIntestitialAd() before showing the ad. Then call to showIntestitialAd() to show an ad. Notice these methods require to be runned on main UI Thread. 
+
+To avoid reconnect to Google Game Play Services on each intestitial shown I commented BaseGameActivity.onStop() method. 
 ========================================================================================
 
 If you have some problem just contact me to:
