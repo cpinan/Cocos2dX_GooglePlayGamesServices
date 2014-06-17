@@ -51,6 +51,12 @@ v.1.0.4
 
 ================================
 
+v.1.0.5
+
+1. Admob intestitial support by hydex86 - https://github.com/hydex86 ; https://github.com/cpinan/Cocos2dX_GooglePlayGamesServices/pull/6
+
+================================
+
 Don't forget add google-play-services_lib library. The version used for this template is: 4242000
 
 Android Support with cocos2d-x for Google Play Games Services.
