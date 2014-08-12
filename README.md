@@ -63,6 +63,19 @@ v.1.0.6
 2. Removed some features for unknown bugs.
 3. Change the ID for Google Play Services work.
 
+Special thanks to:
+- Hyunho.
+- Iam Ks.
+- Patinya Janluechai.
+- Tahir Slezovic.
+- Alberto Gonzáles.
+- Evgeniy Fedoseev.
+- Hori from China.
+- Francis Free.
+- Pietro Vieria.
+
+Thanks for your collaboration to fix this issues with the merge.
+
 ================================
 
 Don't forget add google-play-services_lib library. The version used for this template is: 5089000
