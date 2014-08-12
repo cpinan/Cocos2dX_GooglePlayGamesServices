@@ -1,5 +1,5 @@
-APPNAME="Cocos2dxTest"
-NDK_ROOT="/Users/mac/Documents/android-ndk-r8b"
+APPNAME="GPGSCocos2DX"
+NDK_ROOT="/Users/nss/Documents/adt_11_02_2013/ndk"
 
 # options
 
@@ -38,7 +38,7 @@ fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # ... use paths relative to current directory
-COCOS2DX_ROOT="/Users/mac/Documents/cocos2d-x-2.1.5"
+COCOS2DX_ROOT="/Users/nss/Documents/cocos2d-x-2.1.5"
 APP_ROOT="$DIR/.."
 APP_ANDROID_ROOT="$DIR"
 

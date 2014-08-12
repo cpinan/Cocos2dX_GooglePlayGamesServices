@@ -9,11 +9,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import com.carlospinan.GooglePlayGameServices.R;
+import com.carlospinan.gpgscocos2dx.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.appstate.AppStateManager;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.example.games.basegameutils.BaseGameActivity;
@@ -29,7 +28,6 @@ import com.google.example.games.basegameutils.BaseGameActivity;
 public class UtilActivity extends BaseGameActivity {
 
 	private AdView adView = null;
-	private InterstitialAd interstitial = null;
 	private FrameLayout adViewLayout = null;
 	public static final String TAG = "UtilActivity";
 
@@ -62,39 +60,31 @@ public class UtilActivity extends BaseGameActivity {
 		params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
 
 		// Create an ad.
-		if (ConfigUtils.AD_MOB_ENABLE_BANNER) {
-			adView = new AdView(this);
-			adView.setAdSize(AdSize.SMART_BANNER);
-			adView.setAdUnitId(getResources().getString(R.string.AD_UNIT_ID));
-			adView.setLayoutParams(params);
+		adView = new AdView(this);
+		adView.setAdSize(AdSize.SMART_BANNER);
+		adView.setAdUnitId(getResources().getString(R.string.AD_UNIT_ID));
+		adView.setLayoutParams(params);
 
-			// Add the AdView to the view hierarchy. The view will have no size
-			// until the ad is loaded.
+		// Add the AdView to the view hierarchy. The view will have no size
+		// until the ad is loaded.
 
-			adViewLayout = new FrameLayout(this);
-			adViewLayout.setLayoutParams(params);
-			adViewLayout.addView(adView);
+		adViewLayout = new FrameLayout(this);
+		adViewLayout.setLayoutParams(params);
+		adViewLayout.addView(adView);
 
-			if (ConfigUtils.AD_MOB_DEBUG) {
-				// Create an ad request. Check logcat output for the hashed
-				// device ID to
-				// get test ads on a physical device.
-				AdRequest adRequest = new AdRequest.Builder()
+		if (ConfigUtils.AD_MOB_DEBUG) {
+			// Create an ad request. Check logcat output for the hashed
+			// device ID to
+			// get test ads on a physical device.
+			AdRequest adRequest = new AdRequest.Builder()
 					.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 					.addTestDevice("INSERT_YOUR_HASHED_DEVICE_ID_HERE").build();
 
-				// Start loading the ad in the background.
-				adView.loadAd(adRequest);
-			}
-			this.addContentView(adViewLayout, params);
-		} 
-		
-		if (ConfigUtils.AD_MOB_ENABLE_FULLSCREEN) {
-			interstitial = new InterstitialAd(this);
-		    interstitial.setAdUnitId(getResources().getString(R.string.AD_UNIT_INTERSTITIAL_ID));
+			// Start loading the ad in the background.
+			adView.loadAd(adRequest);
 		}
 
-
+		this.addContentView(adViewLayout, params);
 
 		Log.d(TAG, "Init AdMob Android");
 	}
@@ -220,35 +210,6 @@ public class UtilActivity extends BaseGameActivity {
 		if (ConfigUtils.USE_AD_MOB && adView != null)
 			adViewLayout.setVisibility(View.GONE);
 	}
-	
-	public void preloadInterstitialAd() {
-		if (ConfigUtils.USE_AD_MOB && interstitial != null) {
-		    // Should be done on main thread
-		    this.runOnUiThread(new Runnable() {
-	    		  public void run() {
-	    			  // Create ad request.
-	    			  AdRequest adRequest = new AdRequest.Builder().build();
-	    			    
-	    			  interstitial.loadAd(adRequest);
-	    		  }
-	    	  });
-		}
-	}
-	
-	public void showInterstitialAd() {
-		if (ConfigUtils.USE_AD_MOB && interstitial != null) {
-			
-			// Should be done on main thread
-		    this.runOnUiThread(new Runnable() {
-	    		  public void run() {
-		   			  if (interstitial.isLoaded()) {		    				  
-		   				  interstitial.show();
-	    			  }
-	    		  }
-		    });
-		    
-		}
-	}
 
 	@Override
 	protected void onPause() {
@@ -278,7 +239,7 @@ public class UtilActivity extends BaseGameActivity {
 	 * Cocos2d-x Library
 	 */
 	static {
-		System.loadLibrary("cocos2dcpp");
+		System.loadLibrary("game");
 	}
 
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.carlospinan.GooglePlayGameServices"
+    package="com.carlospinan.gpgscocos2dx"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -48,7 +48,7 @@
         <!-- End here requirement for Google Play Services -->
 
         <activity
-            android:name="com.carlospinan.GooglePlayGameServices.Cocos2dxTest"
+            android:name="com.carlospinan.gpgscocos2dx.Cocos2dxTest"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape"

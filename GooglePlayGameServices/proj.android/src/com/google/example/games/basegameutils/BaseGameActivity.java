@@ -22,16 +22,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.carlospinan.utils.ConfigUtils;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 /**
  * Example base class for games. This implementation takes care of setting up
- * the GamesClient object and managing its lifecycle. Subclasses only need to
+ * the API client object and managing its lifecycle. Subclasses only need to
  * override the @link{#onSignInSucceeded} and @link{#onSignInFailed} abstract
  * methods. To initiate the sign-in flow when the user clicks the sign-in
  * button, subclasses should call @link{#beginUserInitiatedSignIn}. By default,
- * this class only instantiates the GamesClient object. If the PlusClient or
+ * this class only instantiates the GoogleApiClient object. If the PlusClient or
  * AppStateClient objects are also wanted, call the BaseGameActivity(int)
  * constructor and specify the requested clients. For example, to request
  * PlusClient and GamesClient, use BaseGameActivity(CLIENT_GAMES | CLIENT_PLUS).
@@ -77,8 +76,7 @@ public abstract class BaseGameActivity extends Cocos2dxActivity implements
 	 */
 	protected BaseGameActivity(int requestedClients) {
 		super();
-		if (ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			setRequestedClients(requestedClients);
+		setRequestedClients(requestedClients);
 	}
 
 	/**
@@ -108,74 +106,55 @@ public abstract class BaseGameActivity extends Cocos2dxActivity implements
 	@Override
 	protected void onCreate(Bundle b) {
 		super.onCreate(b);
-		if (ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES) {
-			if (mHelper == null) {
-				getGameHelper();
-			}
-			mHelper.setup(this);
+		if (mHelper == null) {
+			getGameHelper();
 		}
+		mHelper.setup(this);
 	}
 
 	@Override
 	protected void onStart() {
 		super.onStart();
-		if (ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			mHelper.onStart(this);
+		mHelper.onStart(this);
 	}
 
 	@Override
 	protected void onStop() {
 		super.onStop();
-		//if (ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-		//	mHelper.onStop();
+		mHelper.onStop();
 	}
 
 	@Override
 	protected void onActivityResult(int request, int response, Intent data) {
 		super.onActivityResult(request, response, data);
-		if (ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			mHelper.onActivityResult(request, response, data);
+		mHelper.onActivityResult(request, response, data);
 	}
 
 	protected GoogleApiClient getApiClient() {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return null;
 		return mHelper.getApiClient();
 	}
 
 	protected boolean isSignedIn() {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return false;
 		return mHelper.isSignedIn();
 	}
 
 	protected void beginUserInitiatedSignIn() {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return;
 		mHelper.beginUserInitiatedSignIn();
 	}
 
 	protected void signOut() {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return;
 		mHelper.signOut();
 	}
 
 	protected void showAlert(String message) {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return;
 		mHelper.makeSimpleDialog(message).show();
 	}
 
 	protected void showAlert(String title, String message) {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return;
 		mHelper.makeSimpleDialog(title, message).show();
 	}
 
 	protected void enableDebugLog(boolean enabled) {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return;
 		mDebugLog = true;
 		if (mHelper != null) {
 			mHelper.enableDebugLog(enabled);
@@ -184,34 +163,24 @@ public abstract class BaseGameActivity extends Cocos2dxActivity implements
 
 	@Deprecated
 	protected void enableDebugLog(boolean enabled, String tag) {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return;
 		Log.w(TAG, "BaseGameActivity.enabledDebugLog(bool,String) is "
 				+ "deprecated. Use enableDebugLog(boolean)");
 		enableDebugLog(enabled);
 	}
 
 	protected String getInvitationId() {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return null;
 		return mHelper.getInvitationId();
 	}
 
 	protected void reconnectClient() {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return;
 		mHelper.reconnectClient();
 	}
 
 	protected boolean hasSignInError() {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return false;
 		return mHelper.hasSignInError();
 	}
 
 	protected GameHelper.SignInFailureReason getSignInError() {
-		if (!ConfigUtils.USE_GOOGLE_PLAY_GAME_SERVICES)
-			return null;
 		return mHelper.getSignInError();
 	}
 }

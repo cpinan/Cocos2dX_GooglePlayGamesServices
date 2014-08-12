@@ -3179,6 +3179,7 @@
 					"-ObjC",
 					"-lsqlite3",
 				);
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"GooglePlayGameServices/libs/Chipmunk/include/chipmunk\"";
 				WRAPPER_EXTENSION = app;
@@ -3213,6 +3214,7 @@
 					"-ObjC",
 					"-lsqlite3",
 				);
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"GooglePlayGameServices/libs/Chipmunk/include/chipmunk\"";
 				VALIDATE_PRODUCT = YES;

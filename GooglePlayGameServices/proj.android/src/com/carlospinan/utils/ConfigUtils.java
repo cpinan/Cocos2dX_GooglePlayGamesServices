@@ -20,8 +20,6 @@ public class ConfigUtils {
 
 	// Use ADMOB
 	public static final boolean USE_AD_MOB = true;
-	public static final boolean AD_MOB_DEBUG = false;
-	public static final boolean AD_MOB_ENABLE_BANNER = false;
-	public static final boolean AD_MOB_ENABLE_FULLSCREEN = true;
+	public static final boolean AD_MOB_DEBUG = true;
 
 }

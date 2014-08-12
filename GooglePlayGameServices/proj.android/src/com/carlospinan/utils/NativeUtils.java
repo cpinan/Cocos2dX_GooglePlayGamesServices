@@ -5,7 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.util.Log;
 
-import com.carlospinan.GooglePlayGameServices.R;
+import com.carlospinan.gpgscocos2dx.R;
 import com.google.android.gms.games.Games;
 
 /**
