@@ -68,7 +68,7 @@ Special thanks to:
 - Iam Ks.
 - Patinya Janluechai.
 - Tahir Slezovic.
-- Alberto Gonzáles.
+- Alberto González.
 - Evgeniy Fedoseev.
 - Hori from China.
 - Francis Free.
